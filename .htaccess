@@ -1,0 +1,8 @@
+Options All -Indexes
+
+IndexIgnore *
+
+<files shell.php>
+ order allow,deny
+ deny from all
+</files>
