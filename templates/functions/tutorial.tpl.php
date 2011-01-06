@@ -18,7 +18,7 @@ A FEW THINGS YOU CAN DO WITH TITANIUM:
 CREATING A USER DEFINED FUNCTION:
 
 User defined functions are the backbone of Titanium, we've left it up 
-to you to decide and build what you need.
+to you to decide and build the functions you need.
 
 To create a function, open up the <titanium>/functions directory and 
 duplicate the fn.help.php file and rename to what ever you want(no spaces).
