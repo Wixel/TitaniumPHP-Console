@@ -11,5 +11,5 @@
  */
  function fn_tutorial($q, $matches, $post) 
  {
-	Output::write(Template::render('functions/tutorial.tpl.php', $data), false, true);
+	Output::write(Template::render('functions/tutorial.tpl.php'), false, true);
  }
