@@ -3,7 +3,7 @@
 //p- %^test$%i
 
 /**
- * Display the help page
+ * Test template
  *
  * @param string $q
  * @param array $matches
@@ -11,11 +11,5 @@
  */
  function fn_test($q, $matches, $post) 
  {
-	$ci = &get_instance();
 	
-	$ci->load->model('User_model');
-	
-	$ci->User_model->insert_person();
-	
-	//$ci->load->helper('user');
  }
