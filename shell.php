@@ -2,12 +2,12 @@
 <?php
 
 	/**
-	 * Titanium PHP Testing Framework
+	 * Titanium PHP Console Framework
 	 *
 	 * @author Sean Nieuwoudt
 	 * @copyright Wixel.net
-	 * @license LGPL
-	 * @link https://github.com/Wixel/TitaniumPHP-Console
+	 * @license GPL
+	 * @link http://github.com/Wixel/TitaniumPHP-Console
 	 * @link git@github.com:Wixel/TitaniumPHP-Console.git
 	 */
 	
