@@ -19,6 +19,7 @@
  	}
 
     require_once(TITAMIUM_ROOT.'titanium/titanium.php');
+    require_once(TITAMIUM_ROOT.'bridge.inc.php');
 
 	Titanium::init();
 

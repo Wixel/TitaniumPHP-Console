@@ -4,7 +4,13 @@
 // --------------- CODEIGNITER 1.7.* --------------- 
 // -------------------------------------------------
 
-// @TODO: Write the CodeIgniter bridge
+#$_SERVER['PATH_INFO'] = $_SERVER['REQUEST_URI'] = $argv[1];
+
+#ob_start();
+
+#require realpath(TITAMIUM_ROOT.'../').'/index.php'; 
+
+#ob_end_clean();
 
 // -------------------------------------------------
 // --------------- KOHANAPHP 3.0.9 -----------------

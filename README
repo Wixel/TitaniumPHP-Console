@@ -1,7 +1,10 @@
-TitaniumPHP is a simple PHP console environment meant to run 
-within your project context.
 
-A FEW THINGS YOU CAN DO WITH TITANIUM:
+TitaniumPHP is a flexible PHP console environment intended to run within your project context - similar to Django's built in shell utility.
+
+
+// -------------------------------------------------
+//  A few things you can do with Titanium 
+// -------------------------------------------------
 
 - Testing code
 - Running cron jobs
@@ -14,23 +17,36 @@ A FEW THINGS YOU CAN DO WITH TITANIUM:
 - Reflection
 - etc.
 
-CREATING A USER DEFINED FUNCTION:
+// -------------------------------------------------
+//  Getting started
+// -------------------------------------------------
+
+- cd <titanium_directory>
+- chmod a+x shell.php
+- php shell.php
+
+// -------------------------------------------------
+//  Creating custom functions
+// -------------------------------------------------
 
 User defined functions are the backbone of Titanium, we've left it up 
 to you to decide and build the functions you need.
 
-To create a function, open up the <titanium>/functions directory and 
+Functions can be thought of as plugins that extend the base functionality
+of Titanium.
+
+To create your own function, open up the <titanium>/functions directory and 
 duplicate the fn.help.php file and rename to what ever you want(no spaces).
-This will give you a function template to start from.
+This will give you a simple function template to start from.
 
 Open your new file and look for: //p- %^help$%i
 
-This is a regex pattern that gets used by the console to determine
+This is a regular expression that gets used by the console to determine
 what function to run. When Titanium loads up, it looks for these 
 patterns and cache's them internally. 
 
-Any named matching groups will be passed as paramenters to the 
-function.
+Any named matching groups will be passed as parameters to your  
+custom function.
 
 Change the 'help' part to anything you want to use to access 
 your function from the command line.
@@ -39,8 +55,27 @@ Next, look for fn_help($q, $matches, $post). Replace 'help' with the same
 name you used for your command pattern, remember to replace spaces with 
 underscores. 
 
-TO GET STARTED:
+Titanium uses static methods internally, this means that you can use 
+any of the core methods inside your custom functions. 
 
-- cd <titanium_directory>
-- chmod a+x shell.php
-- php shell.php
+- Output::write($text, $color = "normal", $newline = false, $newlinecount = 1);
+- Template::render($filename, $data = NULL)
+
+Your custom function files should look like this following:
+
+<?php if(!defined('TITANIUM_CLI')) { exit; }
+
+//p- %^test$%i
+
+/**
+ * Test template
+ *
+ * @param string $q
+ * @param array $matches
+ * @param array $post
+ */
+ function fn_test($q, $matches, $post) 
+ {
+	// Put your code here. 
+ }
+
