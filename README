@@ -1,6 +1,4 @@
-
 TitaniumPHP is a flexible PHP console environment intended to run within your project context - similar to Django's built in shell utility.
-
 
 // -------------------------------------------------
 //  A few things you can do with Titanium 
@@ -8,8 +6,8 @@ TitaniumPHP is a flexible PHP console environment intended to run within your pr
 
 - Testing code
 - Running cron jobs
-- Creating custom management plugins and functions
-- Manage your code 
+- Creating custom functions
+- Managing your code 
 - Testing environments
 - Accessible command line scripting
 - Testing databases
@@ -79,3 +77,16 @@ Your custom function files should look like this following:
 	// Put your code here. 
  }
 
+// -------------------------------------------------
+//  TODO
+// -------------------------------------------------
+
+- Core database classes supporting Postgresql, MySQL, SQLite
+- Persistent configuration feature
+- Ability to parse function names directly from the command line for cron jobs
+- Ability to use config tokens in function names & arguments
+- Replace static help.tpl.php with dynamically generated content
+- Add events & event hooks to the framework
+- Custom function to list all available configs & values
+- Add HTTP API specific testing core class
+- Logger class with multiple writers
