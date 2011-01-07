@@ -78,6 +78,31 @@ Your custom function files should look like this following:
  }
 
 // -------------------------------------------------
+//  Creating custom function templates
+// -------------------------------------------------
+
+If you need your custom functions to output formatted data, you can create 
+a custom template in <titanium>/templates/functions/.
+
+Titanium uses the Savant3 template engine to render output, so familiarize 
+yourself with it - [http://phpsavant.com/]
+
+You output your template content to the CLI using:
+
+Output::write(Template::render('functions/<your template name>.tpl.php'), false, true);
+
+You can assigned variables and other data to use in your template by adding a 
+second parameter to the static render() method, like this:
+
+$data = array(
+ 'name'    => 'Sean Nieuwoudt',
+ 'company' => 'Wixel.net',
+ 'other'   => array(1,2,4,5,6,7)
+);
+
+Output::write(Template::render('functions/<your template name>.tpl.php', $data), false, true);
+
+// -------------------------------------------------
 //  TODO
 // -------------------------------------------------
 
