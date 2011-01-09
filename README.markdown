@@ -1,8 +1,6 @@
 TitaniumPHP is a flexible PHP console environment intended to run within your project context - similar to Django's built in shell utility.
 
-// -------------------------------------------------
-//  A few things you can do with Titanium 
-// -------------------------------------------------
+#  A few things you can do with TitaniumPHP
 
 - Testing code
 - Running cron jobs
@@ -15,17 +13,18 @@ TitaniumPHP is a flexible PHP console environment intended to run within your pr
 - Reflection
 - etc.
 
-// -------------------------------------------------
-//  Getting started
-// -------------------------------------------------
+# Getting started
 
-- cd <titanium_directory>
-- chmod a+x shell.php
-- php shell.php
+<pre>
+> cd <titanium_directory>
+> chmod a+x shell.php
+> php shell.php
+</pre>
 
-// -------------------------------------------------
-//  Creating custom functions
-// -------------------------------------------------
+Titanium allows you to include your project files and interact with your code via the command line 
+and Titanium custom functions.
+
+#  Creating custom functions
 
 User defined functions are the backbone of Titanium, we've left it up 
 to you to decide and build the functions you need.
@@ -33,11 +32,11 @@ to you to decide and build the functions you need.
 Functions can be thought of as plugins that extend the base functionality
 of Titanium.
 
-To create your own function, open up the <titanium>/functions directory and 
-duplicate the fn.help.php file and rename to what ever you want(no spaces).
+To create your own function, open up the `<titanium>/functions` directory and 
+duplicate the `fn.help.php` file and rename to what ever you want(no spaces).
 This will give you a simple function template to start from.
 
-Open your new file and look for: //p- %^help$%i
+Open your new file and look for: `//p- %^help$%i`
 
 This is a regular expression that gets used by the console to determine
 what function to run. When Titanium loads up, it looks for these 
@@ -49,18 +48,26 @@ custom function.
 Change the 'help' part to anything you want to use to access 
 your function from the command line.
 
-Next, look for fn_help($q, $matches, $post). Replace 'help' with the same 
+Next, look for `fn_help($q, $matches, $post)`. Replace 'help' with the same 
 name you used for your command pattern, remember to replace spaces with 
 underscores. 
 
 Titanium uses static methods internally, this means that you can use 
 any of the core methods inside your custom functions. 
 
+<pre>
+	
 - Output::write($text, $color = "normal", $newline = false, $newlinecount = 1);
 - Template::render($filename, $data = NULL)
 
+</pre>
+
 Your custom function files should look like this following:
 
+<pre>
+	
+// Filename: fn.test.php	
+	
 <?php if(!defined('TITANIUM_CLI')) { exit; }
 
 //p- %^test$%i
@@ -77,22 +84,28 @@ Your custom function files should look like this following:
 	// Put your code here. 
  }
 
-// -------------------------------------------------
-//  Creating custom function templates
-// -------------------------------------------------
+</pre>
+
+#  Creating custom function templates
 
 If you need your custom functions to output formatted data, you can create 
-a custom template in <titanium>/templates/functions/.
+a custom template in `<titanium>/templates/functions/`.
 
 Titanium uses the Savant3 template engine to render output, so familiarize 
 yourself with it - [http://phpsavant.com/]
 
 You output your template content to the CLI using:
 
+<pre>
+
 Output::write(Template::render('functions/<your template name>.tpl.php'), false, true);
+
+</pre>
 
 You can assigned variables and other data to use in your template by adding a 
 second parameter to the static render() method, like this:
+
+<pre>
 
 $data = array(
  'name'    => 'Sean Nieuwoudt',
@@ -102,16 +115,16 @@ $data = array(
 
 Output::write(Template::render('functions/<your template name>.tpl.php', $data), false, true);
 
-// -------------------------------------------------
-//  TODO
-// -------------------------------------------------
+</pre>
 
-- Core database classes supporting Postgresql, MySQL, SQLite
-- Persistent configuration feature
-- Ability to parse function names directly from the command line for cron jobs
-- Ability to use config tokens in function names & arguments
-- Replace static help.tpl.php with dynamically generated content
-- Add events & event hooks to the framework
-- Custom function to list all available configs & values
-- Add HTTP API specific testing core class
-- Logger class with multiple writers
+#  TODO
+
+* Core database classes supporting Postgresql, MySQL, SQLite
+* Persistent configuration feature
+* Ability to parse function names directly from the command line for cron jobs
+* Ability to use config tokens in function names & arguments
+* Replace static help.tpl.php with dynamically generated content
+* Add events & event hooks to the framework
+* Custom function to list all available configs & values
+* Add HTTP API specific testing core class
+* Logger class with multiple writers
