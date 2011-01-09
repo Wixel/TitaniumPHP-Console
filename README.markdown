@@ -16,7 +16,7 @@ TitaniumPHP is a flexible PHP console environment intended to run within your pr
 # Getting started
 
 <pre>
-> cd <titanium_directory>
+> cd [titanium_directory]
 > chmod a+x shell.php
 > php shell.php
 </pre>
@@ -58,7 +58,7 @@ any of the core methods inside your custom functions.
 <pre>
 	
 - Output::write($text, $color = "normal", $newline = false, $newlinecount = 1);
-- Template::render($filename, $data = NULL)
+- Template::render($filename, $data = NULL);
 
 </pre>
 
