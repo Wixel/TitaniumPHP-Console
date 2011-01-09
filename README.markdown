@@ -67,8 +67,6 @@ Your custom function files should look like this following:
 <pre>
 	
 // Filename: fn.test.php	
-	
-<?php if(!defined('TITANIUM_CLI')) { exit; }
 
 //p- %^test$%i
 
