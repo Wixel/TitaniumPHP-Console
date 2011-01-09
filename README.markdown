@@ -1,19 +1,24 @@
 TitaniumPHP is a flexible PHP console environment intended to run within your project context - similar to Django's built in shell utility.
 
-#  A few things you can do with TitaniumPHP
+#  Things you can do with TitaniumPHP
 
-- Testing code
-- Running cron jobs
-- Creating custom functions
-- Managing your code 
-- Testing environments
-- Accessible command line scripting
-- Testing databases
-- Debugging performance issues
+- Test code
+- Run cron jobs
+- Create custom functions
+- Manage your code 
+- Test environments
+- Create command line apps with ease
+- Test databases
+- Debug performance issues
 - Reflection
 - etc.
 
 # Getting started
+
+1. Download Titanium
+2. Unzip it and copy the directory into your PHP project directory root.
+
+Then open your terminal and do the following: 
 
 <pre>
 > cd [titanium_directory]
@@ -33,22 +38,22 @@ Functions can be thought of as plugins that extend the base functionality
 of Titanium.
 
 To create your own function, open up the `<titanium>/functions` directory and 
-duplicate the `fn.help.php` file and rename to what ever you want(no spaces).
+duplicate the `fn.help.php` file and rename to what ever you want __(no spaces)__.
 This will give you a simple function template to start from.
 
 Open your new file and look for: `//p- %^help$%i`
 
-This is a regular expression that gets used by the console to determine
-what function to run. When Titanium loads up, it looks for these 
+This is a regular expression that's used by the console to determine
+what function to run. When Titanium loads, it looks for  
 patterns and cache's them internally. 
 
 Any named matching groups will be passed as parameters to your  
 custom function.
 
-Change the 'help' part to anything you want to use to access 
-your function from the command line.
+Change the _'help'_ part to anything you want to use to access 
+your function from the TitaniumPHP command line.
 
-Next, look for `fn_help($q, $matches, $post)`. Replace 'help' with the same 
+Next, look for `fn_help($q, $matches, $post)`. Replace _'help'_ with the same 
 name you used for your command pattern, remember to replace spaces with 
 underscores. 
 
@@ -62,7 +67,7 @@ any of the core methods inside your custom functions.
 
 </pre>
 
-Your custom function files should look like this following:
+Your custom function files should look like the following:
 
 <pre>
 	
@@ -86,17 +91,17 @@ Your custom function files should look like this following:
 
 #  Creating custom function templates
 
-If you need your custom functions to output formatted data, you can create 
+If you need your custom functions to output formatted data to the command line, you can create 
 a custom template in `<titanium>/templates/functions/`.
 
 Titanium uses the Savant3 template engine to render output, so familiarize 
-yourself with it - [http://phpsavant.com/]
+yourself with it - [Savant3](http://phpsavant.com/ "Savant3")
 
 You output your template content to the CLI using:
 
 <pre>
 
-Output::write(Template::render('functions/<your template name>.tpl.php'), false, true);
+Output::write(Template::render('functions/[your template name].tpl.php'), false, true);
 
 </pre>
 
@@ -111,7 +116,7 @@ $data = array(
  'other'   => array(1,2,4,5,6,7)
 );
 
-Output::write(Template::render('functions/<your template name>.tpl.php', $data), false, true);
+Output::write(Template::render('functions/[your template name].tpl.php', $data), false, true);
 
 </pre>
 
