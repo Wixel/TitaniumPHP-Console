@@ -24,6 +24,8 @@ Then open your terminal and do the following:
 > cd [titanium_directory]
 > chmod a+x shell.php
 > php shell.php
+OR
+> ./shell.php with chmod a+x permissions
 </pre>
 
 Titanium allows you to include your project files and interact with your code via the command line 
@@ -53,7 +55,7 @@ custom function.
 Change the _'help'_ part to anything you want to use to access 
 your function from the TitaniumPHP command line.
 
-Next, look for `fn_help($q, $matches, $post)`. Replace _'help'_ with the same 
+Next, look for `fn_help($q, $matches, $params)`. Replace _'help'_ with the same 
 name you used for your command pattern, remember to replace spaces with 
 underscores. 
 
@@ -80,9 +82,9 @@ Your custom function files should look like the following:
  *
  * @param string $q
  * @param array $matches
- * @param array $post
+ * @param array $params
  */
- function fn_test($q, $matches, $post) 
+ function fn_test($q, $matches, $params) 
  {
 	// Put your code here. 
  }
@@ -122,12 +124,11 @@ Output::write(Template::render('functions/[your template name].tpl.php', $data),
 
 #  TODO
 
+* Add config loader for user created config files
 * Core database classes supporting Postgresql, MySQL, SQLite
-* Persistent configuration feature
-* Ability to parse function names directly from the command line for cron jobs
 * Ability to use config tokens in function names & arguments
 * Replace static help.tpl.php with dynamically generated content
 * Add events & event hooks to the framework
 * Custom function to list all available configs & values
-* Add HTTP API specific testing core class
+* Add HTTP API specific testing core class and interacting with HTTP based services
 * Logger class with multiple writers
