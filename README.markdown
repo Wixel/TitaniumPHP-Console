@@ -26,6 +26,8 @@ Then open your terminal and do the following:
 > php shell.php
 OR
 > ./shell.php with chmod a+x permissions
+OR 
+./shell.php [command] [param1] [param2] [param3]...etc
 </pre>
 
 Titanium allows you to include your project files and interact with your code via the command line 
