@@ -13,9 +13,10 @@ class Template
 			exit;
 		}	
 
-		$tpl 	      = new Savant3();
-		$tpl->date    = date('Y');
-		$tpl->version = Titanium::VERSION;
+		$tpl 	      	   = new Savant3();
+		$tpl->date    	   = date('Y');
+		$tpl->version	   = Titanium::VERSION;
+		//$tpl->memory_limit = ini_get('memory_limit');
 		
 		if(is_array($data))
 		{

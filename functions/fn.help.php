@@ -7,9 +7,9 @@
  *
  * @param string $q
  * @param array $matches
- * @param array $post
+ * @param array $params
  */
- function fn_help($q, $matches, $post) 
+ function fn_help($q, $matches, $params) 
  {
 	Output::write(Template::render('functions/help.tpl.php', $data), false, true);
  }

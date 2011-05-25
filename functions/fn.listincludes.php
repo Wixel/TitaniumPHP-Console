@@ -7,9 +7,9 @@
  *
  * @param string $q
  * @param array $matches
- * @param array $post
+ * @param array $params
  */
- function fn_listincludes($q, $matches, $post) 
+ function fn_listincludes($q, $matches, $params) 
  {
 	$data = array(
 		'includes' => Titanium::loaded_classes()

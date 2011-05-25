@@ -7,9 +7,9 @@
  *
  * @param string $q
  * @param array $matches
- * @param array $post
+ * @param array $params
  */
- function fn_tutorial($q, $matches, $post) 
+ function fn_tutorial($q, $matches, $params) 
  {
 	Output::write(Template::render('functions/tutorial.tpl.php'), false, true);
  }

@@ -7,9 +7,9 @@
  *
  * @param string $q
  * @param array $matches
- * @param array $post
+ * @param array $params
  */
- function fn_test($q, $matches, $post) 
+ function fn_test($q, $matches, $params) 
  {
 	
  }
