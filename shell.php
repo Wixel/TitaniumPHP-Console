@@ -98,7 +98,7 @@
 	
 			Output::write(Template::render('errors/invalid-command.tpl.php'), 'red', TRUE);
 
-            Output::write(TICKER, 'bold');
+            print_ticker();
         }
 	}
 	
