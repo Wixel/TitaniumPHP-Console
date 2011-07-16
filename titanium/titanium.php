@@ -102,7 +102,7 @@ class Titanium
 	}
 	
 	/**
-	 * Set the Titanium autloader
+	 * Set the Titanium autoloader
 	 *
 	 * @access public
 	 * @return void
@@ -115,8 +115,11 @@ class Titanium
 		{
 			require $filename;
 			
-			self::$loaded_classes[] = $filename;
-			
+			if(!in_array($filename, self::$loaded_classes))
+			{
+				self::$loaded_classes[] = $filename;
+			}
+
 			return TRUE;
 		}
 		

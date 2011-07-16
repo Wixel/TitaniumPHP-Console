@@ -11,5 +11,19 @@
  */
  function fn_test($q, $matches, $params) 
  {
+	// Logger::write('---------------------------- BEGIN ----------------------------');											
 	
+	/*
+		Config::load('my_config');
+		
+		Example config file contents:
+		
+		return array(
+			'key' => 'value'
+		);
+		
+		Access this using:
+		Config::item('key')
+		
+	*/
  }

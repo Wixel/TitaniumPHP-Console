@@ -6,3 +6,4 @@ COMMANDS        DESCRIPTION
 help            display the help menu
 tutorial        a basic usage tutorial
 list includes   display a list of successfully loaded system classes
+logs            display the log file contents for today's logs

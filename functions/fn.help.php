@@ -11,5 +11,7 @@
  */
  function fn_help($q, $matches, $params) 
  {
+	Logger::write("Running: ".__FUNCTION__);											
+	
 	Output::write(Template::render('functions/help.tpl.php', $data), false, true);
  }

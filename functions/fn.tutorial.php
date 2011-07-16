@@ -11,5 +11,7 @@
  */
  function fn_tutorial($q, $matches, $params) 
  {
+	Logger::write("Running: ".__FUNCTION__);											
+	
 	Output::write(Template::render('functions/tutorial.tpl.php'), false, true);
  }

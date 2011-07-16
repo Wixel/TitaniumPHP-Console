@@ -11,6 +11,8 @@
  */
  function fn_listincludes($q, $matches, $params) 
  {
+	Logger::write("Running: ".__FUNCTION__);											
+	
 	$data = array(
 		'includes' => Titanium::loaded_classes()
 	);
