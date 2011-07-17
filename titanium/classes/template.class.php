@@ -1,6 +1,6 @@
 <?php if(!defined('TITANIUM_CLI')) { exit; }
 
-require_once(TITAMIUM_ROOT.'titanium/utils/Savant/Savant3.php');
+require_once(TITANIUM_ROOT.'titanium/utils/Savant/Savant3.php');
 
 class Template
 {	

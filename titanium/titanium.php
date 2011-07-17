@@ -109,7 +109,7 @@ class Titanium
 	 */
 	public static function auto_loader($classname)
 	{
-		$filename = TITAMIUM_ROOT.'titanium/classes/'.strtolower($classname).'.class.php';
+		$filename = TITANIUM_ROOT.'titanium/classes/'.strtolower($classname).'.class.php';
 
 		if(file_exists($filename))
 		{
@@ -134,20 +134,20 @@ class Titanium
 	 */	
 	private static function load_functions()
 	{
-		if(!is_dir(TITAMIUM_ROOT.'functions'))
+		if(!is_dir(TITANIUM_ROOT.'functions'))
 		{
 			throw new Exception('Functions directory is invalid');
 			
 			exit;
 		}
 		
-	    $handler  = opendir(TITAMIUM_ROOT.'functions');
+	    $handler  = opendir(TITANIUM_ROOT.'functions');
 
 	    while ($file = readdir($handler)) {
 
 	        if ($file != '.' && $file != '..' && $file[0] != '.') {
 
-	            $function = file_get_contents(TITAMIUM_ROOT.'functions/'.$file);
+	            $function = file_get_contents(TITANIUM_ROOT.'functions/'.$file);
 
 	            preg_match_all('#\/\/p- (%.+%i)\n#', $function, $matches);
 

@@ -8,7 +8,7 @@
 
 #ob_start();
 
-#require realpath(TITAMIUM_ROOT.'../').'/index.php'; 
+#require realpath(TITANIUM_ROOT.'../').'/index.php'; 
 
 #ob_end_clean();
 

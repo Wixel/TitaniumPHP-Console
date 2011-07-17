@@ -14,7 +14,7 @@
 	if(php_sapi_name() == 'cli' && empty($_SERVER['REMOTE_ADDR'])) 
 	{
 		define('TITANIUM_CLI' , TRUE);         
-		define('TITAMIUM_ROOT', realpath(dirname(__FILE__)).DIRECTORY_SEPARATOR);
+		define('TITANIUM_ROOT', realpath(dirname(__FILE__)).DIRECTORY_SEPARATOR);
 		define('TICKER'       , 'php@localhost » ');
  	}
 	else
@@ -26,8 +26,8 @@
     * SETUP CORE
     *-------------------------------------------------*/
 
-    require_once(TITAMIUM_ROOT.'titanium/titanium.php');
-    require_once(TITAMIUM_ROOT.'bridge.inc.php');
+    require_once(TITANIUM_ROOT.'titanium/titanium.php');
+    require_once(TITANIUM_ROOT.'bridge.inc.php');
 
 	Titanium::init();
 	

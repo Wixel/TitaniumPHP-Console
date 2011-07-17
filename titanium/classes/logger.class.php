@@ -12,7 +12,7 @@ class Logger
 	 */
 	public static function write($o, $type = NULL)
 	{
-		$file = TITAMIUM_ROOT.'logs/'.date('Y-m-d').'.txt';
+		$file = TITANIUM_ROOT.'logs/'.date('Y-m-d').'.txt';
 		
 		if($type == 'error')
 		{

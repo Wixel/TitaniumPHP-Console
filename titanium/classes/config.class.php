@@ -20,7 +20,7 @@ class Config
 			exit;
 		}
 		
-		$file = TITAMIUM_ROOT.'config/'.$config_file.'.php';		
+		$file = TITANIUM_ROOT.'config/'.$config_file.'.php';		
 		
 		if(file_exists($file))
 		{

@@ -11,7 +11,7 @@
  */
  function fn_logs($q, $matches, $params) 
  {	
-	$log_file = TITAMIUM_ROOT.'logs/'.date('Y-m-d').'.txt';
+	$log_file = TITANIUM_ROOT.'logs/'.date('Y-m-d').'.txt';
 	
 	Logger::write("Reading log file: $log_file");											
 	

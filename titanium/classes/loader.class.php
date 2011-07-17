@@ -18,7 +18,7 @@ class Loader
 			exit;
 		}	
 
-		$file = TITAMIUM_ROOT.'vendors/'.$filename;
+		$file = TITANIUM_ROOT.'vendors/'.$filename;
 
 		if(file_exists($file))
 		{
