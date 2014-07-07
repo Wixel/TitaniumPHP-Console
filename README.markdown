@@ -1,6 +1,6 @@
 TitaniumPHP is a flexible PHP console environment intended to run within your project context - similar to Django's built in shell utility.
 
-<img src="http://wixel.net/fshare/titanium2.png">
+<img src="http://162.243.64.249/public/pastebin/titanium.png">
 
 #  Things you can do with TitaniumPHP
 
