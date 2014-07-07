@@ -15,7 +15,7 @@ TitaniumPHP is a flexible PHP console environment intended to run within your pr
 - Debug performance issues
 - Reflection
 - etc.
-
+- 
 # Getting started
 
 1. Download Titanium
@@ -23,7 +23,7 @@ TitaniumPHP is a flexible PHP console environment intended to run within your pr
 
 Then open your terminal and do the following: 
 
-<pre>
+'''shell
 > cd [titanium_directory]
 > chmod a+x shell.php
 > php shell.php
@@ -31,7 +31,7 @@ OR
 > ./shell.php with chmod a+x permissions
 OR 
 ./shell.php [command] [param1] [param2] [param3]...etc
-</pre>
+'''
 
 Titanium allows you to include your project files and interact with your code via the command line 
 and Titanium custom functions.
@@ -67,31 +67,30 @@ underscores.
 Titanium uses static methods internally, this means that you can use 
 any of the core methods inside your custom functions. 
 
-<pre>
-	
+'''php
 - Output::write($text, $color = "normal", $newline = false, $newlinecount = 1);
 - Template::render($filename, $data = NULL);
-
-</pre>
+'''
 
 Your custom function files should look like the following:
 
-	
-    // Filename: fn.test.php	
+'''php	
+// Filename: fn.test.php	
 
-    //p- %^test$%i
+//p- %^test$%i
 
-    /**
-     * Test template
-     *
-     * @param string $q
-     * @param array $matches
-     * @param array $params
-     */
-     function fn_test($q, $matches, $params) 
-     {
-	// Put your code here. 
-     }
+/**
+ * Test template
+ *
+ * @param string $q
+ * @param array $matches
+ * @param array $params
+ */
+ function fn_test($q, $matches, $params) 
+ {
+   // Put your code here. 
+ }
+'''
 
 #  Creating custom function templates
 
@@ -103,17 +102,14 @@ yourself with it - [Savant3](http://phpsavant.com/ "Savant3")
 
 You output your template content to the CLI using:
 
-<pre>
-
+'''php
 Output::write(Template::render('functions/[your template name].tpl.php'), false, true);
-
-</pre>
+'''
 
 You can assigned variables and other data to use in your template by adding a 
 second parameter to the static render() method, like this:
 
-<pre>
-
+'''php
 $data = array(
  'name'    => 'Sean Nieuwoudt',
  'company' => 'Wixel.net',
@@ -121,8 +117,7 @@ $data = array(
 );
 
 Output::write(Template::render('functions/[your template name].tpl.php', $data), false, true);
-
-</pre>
+'''
 
 #  TODO
 
