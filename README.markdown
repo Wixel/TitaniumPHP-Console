@@ -76,25 +76,22 @@ any of the core methods inside your custom functions.
 
 Your custom function files should look like the following:
 
-<pre>
 	
-// Filename: fn.test.php	
+    // Filename: fn.test.php	
 
-//p- %^test$%i
+    //p- %^test$%i
 
-/**
- * Test template
- *
- * @param string $q
- * @param array $matches
- * @param array $params
- */
- function fn_test($q, $matches, $params) 
- {
+    /**
+     * Test template
+     *
+     * @param string $q
+     * @param array $matches
+     * @param array $params
+     */
+     function fn_test($q, $matches, $params) 
+     {
 	// Put your code here. 
- }
-
-</pre>
+     }
 
 #  Creating custom function templates
 
